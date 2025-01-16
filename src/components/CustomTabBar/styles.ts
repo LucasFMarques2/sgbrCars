@@ -4,7 +4,7 @@ import styled from 'styled-components/native'
 export const ViewContainer = styled.View`
     flex-direction: row;
     justify-content: space-evenly;
-    padding: 20px;
+    padding: 25px 20px;
     background: ${({ theme }) => theme.COLORS.blue_600};
     border-top-width: 1px;
     border-top-color: ${({ theme }) => theme.COLORS.gray_opacity};

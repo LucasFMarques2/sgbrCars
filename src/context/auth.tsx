@@ -36,12 +36,12 @@ function AuthProvider({ children }: AuthProviderProps) {
     try {
     
       const response = await authenticateApi.post("/signIn", { user, password })
-      const { token } = response.data.user
+      const { token, name, id } = response.data.user
 
       await AsyncStorage.setItem("@sgbrCars:token", token)
       authenticateApi.defaults.headers.common["Authorization"] = `Bearer ${token}`
     
-      setData({ token })
+      setData({ token, user: { id, name } })
     
       Alert.alert('Login realizado com sucesso')
     
@@ -61,6 +61,8 @@ function AuthProvider({ children }: AuthProviderProps) {
   
   async function signOut(){
     await  AsyncStorage.removeItem("@sgbrCars:token")
+    setData({})
+    navigation.reset({ routes: [{ name: "Login" }] })
   }
 
   return (
