@@ -10,7 +10,8 @@ export default  {
  
      white: '#FFF',
      black: '#000',
-     gray_opacity: 'rgba(54, 53, 53, 0.5)'
+     gray_opacity: 'rgba(54, 53, 53, 0.5)',
+     red: '#c90d0d',
     },
     FONT_FAMILY: {
      REGULAR: 'Poppins_400Regular',

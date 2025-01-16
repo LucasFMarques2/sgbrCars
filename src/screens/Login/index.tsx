@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import { useForm, Controller } from "react-hook-form";
+import React, { useState } from "react"
+import { useForm, Controller } from "react-hook-form"
 import {
   KeyboardAvoidingView,
   Platform,
   Keyboard,
   TouchableWithoutFeedback,
   ScrollView
-} from "react-native";
+} from "react-native"
 
 import {
   LoginContainer,
@@ -16,25 +16,24 @@ import {
   LogoContainer,
   FormContainer,
   ButtonContainer
-} from './styles';
-import backgroundLogin from '@assets/backgroundLogin.jpg';
-import sgbrLogo from '@assets/sgbrLogo.png';
-import { Input } from "@components/Input";
-import { useAuth } from "@context/auth";
-import { useTheme } from "styled-components";
+} from './styles'
+import backgroundLogin from '@assets/backgroundLogin.jpg'
+import sgbrLogo from '@assets/sgbrLogo.png'
+import { Input } from "@components/Input"
+import { useAuth } from "@context/auth"
 import { MaterialIcons, Octicons } from "@expo/vector-icons"
 
 export function Login() {
-  const { signIn } = useAuth();
-  const [hiddePassword, setHiddePassword] = useState(true);
-  const { handleSubmit, control } = useForm<{ user: string; password: string }>();
+  const { signIn } = useAuth()
+  const [hiddePassword, setHiddePassword] = useState(true)
+  const { handleSubmit, control } = useForm<{ user: string; password: string }>()
   const dismissKeyboard = () => {
-    Keyboard.dismiss();
+    Keyboard.dismiss()
   };
 
   const onSubmit = (data: { user: string; password: string }) => {
     const { user, password } = data;
-    signIn({ user: user, password }); 
+    signIn({ user: user, password })
   };
 
   const handleHiddePassword= ()=> {
