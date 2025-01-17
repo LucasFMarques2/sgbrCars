@@ -36,4 +36,3 @@ Para executar a aplicação em sua máquina local, siga os seguintes passos:
     ```bash
      npx expor start
 8. Verifique se o android Studio está instalado se sim, precisone A no terminal que rodou o comando "npx expor start", voce também pode baixar o aplicativo da expo no seu smart phone para rodar a aplicação, desde que esteja utilizando o mesmo wi-fi
-9. 
